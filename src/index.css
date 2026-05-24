@@ -1,0 +1,386 @@
+@import "tailwindcss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+@import "tailwindcss";
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: black;
+  color: white;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ========================= */
+/* MAIN BACKGROUND */
+/* ========================= */
+
+.main-background{
+  position: fixed;
+  inset: 0;
+
+  background: black;
+
+  overflow: hidden;
+
+  z-index: -100;
+}
+
+/* ========================= */
+/* GLOW EFFECTS */
+/* ========================= */
+
+.purple-glow{
+  position: absolute;
+
+  top: -250px;
+  left: -250px;
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background: rgba(168, 85, 247, 0.2);
+
+  filter: blur(180px);
+
+  animation: pulseGlow 8s infinite ease-in-out;
+}
+
+.blue-glow{
+  position: absolute;
+
+  right: -250px;
+  top: 20%;
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background: rgba(59, 130, 246, 0.2);
+
+  filter: blur(180px);
+
+  animation: pulseGlow 10s infinite ease-in-out;
+}
+
+.pink-glow{
+  position: absolute;
+
+  bottom: -250px;
+  left: 30%;
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background: rgba(236, 72, 153, 0.1);
+
+  filter: blur(200px);
+
+  animation: pulseGlow 12s infinite ease-in-out;
+}
+
+/* ========================= */
+/* GRID OVERLAY */
+/* ========================= */
+
+.grid-overlay{
+  position: fixed;
+  inset: 0;
+
+  background-image:
+  linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+
+  background-size: 80px 80px;
+
+  z-index: -90;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.custom-navbar{
+  position: fixed;
+
+  top: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 95%;
+  max-width: 1300px;
+
+  padding: 18px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  z-index: 1000;
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero-section{
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: 140px;
+}
+
+.hero-container{
+  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+  gap: 100px;
+
+  align-items: center;
+
+  padding: 0 60px;
+}
+
+/* ========================= */
+/* HERO TITLE */
+/* ========================= */
+
+.hero-title{
+  font-size: clamp(4rem, 10vw, 8rem);
+
+  line-height: 0.9;
+
+  font-weight: 900;
+
+  letter-spacing: -4px;
+}
+
+.gradient-text{
+  background: linear-gradient(
+    to right,
+    #a855f7,
+    #ec4899,
+    #3b82f6
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========================= */
+/* DESCRIPTION */
+/* ========================= */
+
+.hero-description{
+  margin-top: 40px;
+
+  max-width: 700px;
+
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  color: #9ca3af;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.hero-buttons{
+  margin-top: 50px;
+
+  display: flex;
+  gap: 20px;
+}
+
+.primary-btn{
+  padding: 18px 40px;
+
+  border-radius: 999px;
+
+  background: white;
+
+  color: black;
+
+  font-weight: 600;
+
+  transition: 0.4s;
+}
+
+.primary-btn:hover{
+  transform: translateY(-5px);
+
+  background: #a855f7;
+
+  color: white;
+}
+
+.secondary-btn{
+  padding: 18px 40px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(20px);
+
+  transition: 0.4s;
+}
+
+.secondary-btn:hover{
+  border-color: #a855f7;
+
+  color: #a855f7;
+}
+
+/* ========================= */
+/* HERO IMAGE */
+/* ========================= */
+
+.hero-image-wrapper{
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-card{
+  position: relative;
+
+  width: 350px;
+  height: 500px;
+
+  overflow: hidden;
+
+  border-radius: 40px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 0 80px rgba(168,85,247,0.2);
+
+  transition: 0.5s;
+}
+
+.hero-image-card:hover{
+  transform: scale(1.03);
+}
+
+.hero-image-card img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.7s;
+}
+
+.hero-image-card:hover img{
+  transform: scale(1.1);
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes pulseGlow{
+
+  0%{
+    transform: scale(1);
+  }
+
+  50%{
+    transform: scale(1.1);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width: 992px){
+
+  .hero-container{
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .hero-buttons{
+    justify-content: center;
+  }
+
+}
+
+/* ========================= */
+/* 3D HOVER EFFECT */
+/* ========================= */
+
+.project-card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.project-card-3d:hover {
+  transform: perspective(1000px) rotateX(6deg) rotateY(-6deg) scale(1.03);
+}
+
